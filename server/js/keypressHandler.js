@@ -24,6 +24,7 @@ const logKeypress = (key) => {
 ///////////////////////////////////////////////////////////////////////////////
 
 var message = ''; // a buffer to collect key presses
+let store = [];
 
 module.exports.initialize = () => {
 
@@ -37,6 +38,8 @@ module.exports.initialize = () => {
     // check to see if the keypress itself is a valid message
     if (isValidMessage(key.name)) {
       console.log(`Message received: ${key.name}`);
+      store.push(key.name);
+      console.log(store);
       return; // don't do any more processing on this key
     }
     
@@ -67,3 +70,5 @@ if (process.stdin.setRawMode) {
   // configure stdin for raw mode, if possible
   process.stdin.setRawMode(true);
 }
+
+module.exports.store = store;

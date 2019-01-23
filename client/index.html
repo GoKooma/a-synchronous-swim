@@ -1,9 +1,12 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="/js/swimTeam.js"></script>
+  <script src='/js/httpFetcher.js'></script>
 </head>
 <body>
   <h1>A Synchronous Swim</h1>
+  <button type="button" onclick="fetchDirection()">Swim Dequeue</button>
   <div class="pool">
     <div class="team">
       <div class="swimmer">↜</div>
@@ -15,7 +18,6 @@
 </body>
 <script src="/node_modules/jquery/dist/jquery.js"></script>
 <script src="/node_modules/underscore/underscore.js"></script>
-<script src="/js/swimTeam.js"></script>
 <script src="/js/keypressHandler.js"></script>
 
 </html>
